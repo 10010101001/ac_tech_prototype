@@ -293,15 +293,15 @@ static struct itemstat { int add, max, sound; const char *name; int icon, info; 
 
 static const struct attackinfo { int gun, action, anim, vwepanim, hudanim, sound, hudsound, attackdelay, damage, spread, margin, projspeed, kickamount, range, rays, hitpush, exprad, ttl, use, mdl_kick_rot, mdl_kick_back; } attacks[NUMATKS] =
 {
-    { GUN_KNIFE, ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_KNIFE, S_KNIFE, 500, 1, 0, 1, 1000, 30, 1024, 1, 5000, 15, 0, 0, 0, 0 },
-    { GUN_PISTOL,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_PISTOL,  S_PISTOL, 160, 1, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 6, 5 },
-    { GUN_CARBINE,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_CARBINE,  S_CARBINE, 720, 1, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 4, 4 },
-    { GUN_SHOTGUN,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_SHOTGUN,  S_SHOTGUN, 880, 1, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 9, 9 },
-    { GUN_SUBGUN,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_SUBGUN,  S_SUBGUN, 80, 1, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 1, 2 },
-    { GUN_SNIPER,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_SNIPER,  S_SNIPER, 1500, 1, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 4, 4 },
-    { GUN_SNIPER2,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_SNIPER,  S_SNIPER, 1500, 1, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 4, 4 },
-    { GUN_ASSAULT,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_ASSAULT,  S_ASSAULT, 120, 1, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 0, 2 },
-    { GUN_GRENADE,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_GRENADEPULL,  S_GRENADEPULL, 650  , 1, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 3, 1 },
+    { GUN_KNIFE, ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_KNIFE, S_KNIFE, 500, 50, 0, 1, 1000, 30, 1024, 1, 5000, 15, 0, 0, 0, 0 },
+    { GUN_PISTOL,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_PISTOL,  S_PISTOL, 160, 18, 53, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 6, 5 },
+    { GUN_CARBINE,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_CARBINE,  S_CARBINE, 720, 60, 10, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 4, 4 },
+    { GUN_SHOTGUN,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_SHOTGUN,  S_SHOTGUN, 880, 10, 360, 0,    0, 30, 2048, 10, 5000,  0, 0, 0, 9, 9 },
+    { GUN_SUBGUN,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_SUBGUN,  S_SUBGUN, 80, 16, 0, 45,    0, 30, 2048, 1, 5000,  0, 0, 0, 1, 2 },
+    { GUN_SNIPER,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_SNIPER,  S_SNIPER, 1500, 82, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 4, 4 },
+    { GUN_SNIPER2,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_SNIPER,  S_SNIPER, 1500, 82, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 4, 4 },
+    { GUN_ASSAULT,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_ASSAULT,  S_ASSAULT, 120, 22, 0, 18,    0, 30, 2048, 1, 5000,  0, 0, 0, 0, 2 },
+    { GUN_GRENADE,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_GRENADEPULL,  S_GRENADEPULL, 650  , 100, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 3, 1 },
     { GUN_AKIMBO,  ACT_SHOOT, ANIM_SHOOT, ANIM_VWEP_SHOOT, ANIM_GUN_SHOOT, S_PISTOL,  S_PISTOL, 80, 1, 0, 0,    0, 30, 2048, 1, 5000,  0, 0, 0, 6, 5 },
 };
 
@@ -329,7 +329,7 @@ struct gamestate
     int ammo[NUMGUNS];
     int aitype, skill;
 
-    gamestate() : maxhealth(1), aitype(AI_NONE), skill(0) {}
+    gamestate() : maxhealth(100), aitype(AI_NONE), skill(0) {}
 
     bool canpickup(int type)
     {
@@ -450,7 +450,7 @@ struct gameent : dynent, gamestate
     {
         frags = flags = deaths = 0;
         totaldamage = totalshots = 0;
-        maxhealth = 1;
+        maxhealth = 100;
         lifesequence = -1;
         respawned = suicided = -2;
     }
